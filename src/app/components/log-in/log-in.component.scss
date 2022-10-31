@@ -1,0 +1,128 @@
+.overlay {
+    position: fixed; /* Positioning and size */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    background-color: rgba(128,128,128,0.6); /* color */
+    // display: none; /* making it hidden by default */
+    pointer-events: none;
+  }
+.wrapper {
+    position: absolute;
+    width: 335px;
+    height: 300px;
+    top: 34%;
+    right: calc(50% - 167px);
+    z-index: 4;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    &.light-theme {
+        background-color: #fff;
+        color: #000;
+        input {
+            background-color: #F1F1F1;
+            color: #000;
+        }
+        .btnClose {
+            background-color: #F1F1F1;;
+            color: #545454;
+        }
+        .content {
+            .forgotPassword {
+                background-color: #fff;
+                &:hover {
+                    background-color: #d7d7d7;
+                }
+            }
+            button:not(.forgotPassword) {
+                color: #fff;
+            }
+        }
+    }
+    &.dark-theme {
+        background-color: #282C34;
+        color: #ABB2BF;
+        input {
+            background-color: #3E4452;
+            color: #ABB2BF;
+        }
+        .btnClose {
+            background-color: #3E4452;
+            color: #ABB2BF;
+        }
+        .content {
+            .forgotPassword {
+                background-color: #3E4452;
+                &:hover {
+                    background-color: #282C34;
+                }
+            }
+            button:not(.forgotPassword) {
+                color: #ABB2BF;
+            }
+        }
+    }
+    .content {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        .title {
+            font-weight: bold;
+            font-size: 30px;
+        }
+        input {
+            border-width: 0;
+            border-radius: 10px;
+            height: 35px;
+            width: 90%;
+            padding-left: 15px;
+        }
+        button:not(.forgotPassword) {
+            width: 95%;
+            border-width: 0;
+            border-radius: 10px;
+            height: 40px;
+            color: #fff;
+            &.btnSignIn {
+                background-color: #002561;
+            }
+            &.btnRegister {
+                background-color: #002561;
+            }
+        }
+        .forgotPassword {
+            position: relative;
+            top: -40px;
+            right: -90px;
+            border: none;
+            font-weight: 900;
+            border-radius: 10px;
+        }
+        .ruleText {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            .hr {
+                height:2px;
+                width: 135px;
+                background-color: #000;
+            }
+        }
+    }
+    .btnClose {
+        position: absolute;
+        right: -12px;
+        top: -10px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+}

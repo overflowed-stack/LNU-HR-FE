@@ -1,0 +1,19 @@
+<div class="overlay"></div>
+<div class="wrapper" [ngClass]="{'dark-theme': theme === 'dark-theme', 'light-theme': theme === 'light-theme'}">
+    <div class="content">
+        <div class="title">Вхід</div>
+        <input type="text" placeholder="Email або Логін">
+        <input type="text" placeholder="Пароль">
+        <button class="forgotPassword" (click)="forgotPassword()">Забули пароль?</button>
+        <button class="btnSignIn" type="button" (click)="logIn()">Увійти</button>
+        <div class="ruleText">
+            <div class="hr"></div>
+            <div>АБО</div>
+            <div class="hr"></div>
+        </div>
+        <button class="btnRegister" type="button" (click)="register()">Реєстрація</button>
+    </div>
+    <button class="btnClose" (click)="close()">
+        <fa-icon class="fa-lg" [icon]="faXmark"></fa-icon>
+    </button>
+</div>

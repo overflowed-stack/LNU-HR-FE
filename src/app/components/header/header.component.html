@@ -1,0 +1,54 @@
+<header>
+    <ul>
+        <li
+            routerLink="/"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+        >
+            Cringe 1000-7
+        </li>
+        <button
+            type="button"
+            *ngIf="!user; else elseBlock"
+            (click)="open('isLogInModalOpen')"
+        >
+            Вхід
+        </button>
+        <ng-template #elseBlock>
+            <app-header-user-info
+                [img]="'https://i1.sndcdn.com/avatars-000620693316-ukl0j7-t500x500.jpg'"
+                [name]="'Борисюк Ярина Євгенівна'"
+                (openChangePasswordEventEmitter)="open('isChangePasswordModalOpen')"
+                [theme]="theme"
+            >
+            </app-header-user-info>
+        </ng-template>
+        <app-log-in
+            *ngIf="isLogInModalOpen"
+            (closeEventEmitter)="close('isLogInModalOpen')"
+            (openRegisterEventEmitter)="open('isRegisterModalOpen')"
+            (openForgotPasswordEventEmitter)="open('isForgotPasswordModalOpen')"
+            [theme]="theme"
+        >
+        </app-log-in>
+        <app-register
+            *ngIf="isRegisterModalOpen"
+            (closeEventEmitter)="close('isRegisterModalOpen')"
+            (openLogInEventEmitter)="open('isLogInModalOpen')"
+            [theme]="theme"
+        >
+        </app-register>
+        <app-forgot-password
+            *ngIf="isForgotPasswordModalOpen"
+            (closeEventEmitter)="close('isForgotPasswordModalOpen')"
+            [theme]="theme"
+        >
+        </app-forgot-password>
+        <app-change-password
+            *ngIf="isChangePasswordModalOpen"
+            (closeEventEmitter)="close('isChangePasswordModalOpen')"
+            [theme]="theme"
+        >
+        </app-change-password>
+    </ul>
+</header>

@@ -1,0 +1,15 @@
+<div class="wrapper" [ngClass]="{'dark-theme': theme === 'dark-theme', 'light-theme': theme === 'light-theme'}">
+    <fa-icon [icon]="faSitemap"></fa-icon>
+    <div class="title">Кадри</div>
+    <div class="name"># Назва</div>
+    <app-list-item [theme]="theme"></app-list-item>
+    <app-list-item [theme]="theme"></app-list-item>
+    <app-list-item [theme]="theme"></app-list-item>
+    <app-list-item [theme]="theme"></app-list-item>
+    <app-list-item [theme]="theme"></app-list-item>
+    <app-list-item [theme]="theme"></app-list-item>
+    <app-list-item [theme]="theme"></app-list-item>
+    <button class="addItem">
+        <fa-icon [icon]="faPlus"></fa-icon>
+    </button>
+</div>

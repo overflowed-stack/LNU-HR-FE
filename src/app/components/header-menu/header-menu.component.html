@@ -1,0 +1,22 @@
+<div class="wrapper prevent-select" [ngClass]="{'dark-theme': theme === 'dark-theme', 'light-theme': theme === 'light-theme'}">
+    <div
+        routerLink="/details"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+    >
+        <fa-icon [icon]="faUser"></fa-icon>
+        Профіль
+    </div>
+    <div (click)="changePassword()">
+        <fa-icon [icon]="faArrowsRotate"></fa-icon>
+        Змінити пароль
+    </div>
+    <div (click)="changeTheme()">
+        <img src="../../../assets/Icondaynight.svg">
+        Змінити тему
+    </div>
+    <div>
+        <fa-icon [icon]="faRightFromBracket"></fa-icon>
+        Вихід
+    </div>
+</div>
