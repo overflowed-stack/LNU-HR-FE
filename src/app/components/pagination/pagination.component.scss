@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    fa-icon, div {
+        background-color: #002561;
+        color: white;
+        padding: 5px 10px;
+        font-size: 24px;
+        margin: 0 5px;
+        border-radius: 10px;
+    }
+}

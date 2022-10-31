@@ -1,0 +1,96 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &.light-theme {
+        img {
+            border: 5px solid white;
+            color: #000;
+        }
+        .content {
+            background-color: white;
+            color: #000;
+            fa-icon, button {
+                color: #fff;
+            }
+        }
+        .img-wrapper {
+            border: 5px solid #fff;
+        }
+    }
+    &.dark-theme {
+        img {
+            border: 5px solid #282C34;
+            color: #ABB2BF;
+        }
+        .content {
+            background-color: #282C34;
+            color: #ABB2BF;
+            fa-icon, button {
+                color: #ABB2BF;
+            }
+        }
+        .img-wrapper {
+            border: 5px solid #000;
+        }
+    }
+    .img-wrapper {
+        box-shadow: 0px 0 5px black;
+        z-index: 1;
+        position: relative;
+        margin-bottom: -160px;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+    }
+    img {
+        z-index: 3;
+        position: relative;
+        border-radius: 50%;
+        width: 150px;
+    }
+    .content {
+        z-index: 2;
+        box-shadow: 0px 0 5px black;
+        border-radius: 10px;
+        width: 300px;
+        height: 210px;
+        padding: 50px 15px 15px 15px;
+        position: relative;
+        bottom: 70px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 18px;
+        fa-icon {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        .btn-wrapper {
+            display: flex;
+            width: 100%;
+            button {
+                margin: 0 3px;
+                padding: 5px 10px;
+                background-color: #002561;
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29px;
+                border: 0px transparent;
+                border-radius: 10px;
+                &:first-child {
+                    width: 100%;
+                }
+                fa-icon {
+                    margin-right: 0px;
+                    font-size: 24px;
+                }
+            }
+        }       
+    }
+}

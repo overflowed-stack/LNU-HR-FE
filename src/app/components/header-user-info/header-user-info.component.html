@@ -1,0 +1,13 @@
+<div class="wrapper prevent-select" [ngClass]="{'dark-theme': theme === 'dark-theme', 'light-theme': theme === 'light-theme'}">
+    <img [src]="img">
+    <div class="userName" (click)="toggleMenu()">
+        {{name}}
+        <fa-icon [icon]="faChevronDown"></fa-icon>
+        <app-header-menu
+            [theme]="theme"
+            *ngIf="showMenu"
+            (openChangePasswordEventEmitter)="changePassword()"
+        >
+        </app-header-menu>
+    </div>
+</div>

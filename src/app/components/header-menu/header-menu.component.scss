@@ -1,0 +1,23 @@
+.wrapper {
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: -20px;
+    width: 180px;
+    // border: 1px solid black;
+    & > div {
+        margin: 5px;
+    }
+    &.light-theme {
+        background-color: #fff;
+        color: #000;
+    }
+    &.dark-theme {
+        background-color: #282C34;
+        color: #ABB2BF;
+    }
+}
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}

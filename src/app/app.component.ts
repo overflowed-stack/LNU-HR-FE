@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, QueryList, ViewChildren } from '@angular/core';
+import { NgThemeDirective } from './directives/ng-theme.directive';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lnu-hr-fe';
+  modalOpened = false;
+
+  setModalState(isOpened: boolean) {
+    this.modalOpened = isOpened;
+  }
+
+  changeTheme() {
+    
+  }
 }

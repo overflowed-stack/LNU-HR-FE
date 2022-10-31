@@ -1,0 +1,42 @@
+.wrapper {
+    &.light-theme {
+        background-color: white;
+        color: white;
+    }
+    &.dark-theme {
+        background-color: #282C34;
+        color: #ABB2BF;
+    }
+    
+    border-radius: 10px;
+
+    & > fa-icon {
+        background-color: #002561;
+        color: #fff;
+        padding: 10px;
+        top: 10px;
+        position: relative;
+        border-radius: 10px 0 10px 0;
+    }
+    .title {
+        font-size: 24px;
+        margin-left: 15%;
+        margin-top: -10px;
+    }
+    .name {
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    .addItem {
+        width: 90%;
+        height: 40px;
+        font-size: 30px;
+        margin: 15px;
+        border-radius: 5px;
+        border-width: 0;
+        background-color: #002561;
+        color: #fff;
+    }
+}
