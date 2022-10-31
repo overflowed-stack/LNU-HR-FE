@@ -4,6 +4,7 @@
 .wrapper {
     min-height: calc(100vh - 160px);
     padding-top: 20px;
+    padding-bottom: 20px;
     &.light-theme {
         background-color: #fff;
         color: #fff;
@@ -16,11 +17,13 @@
                 }
                 .contacts {
                     background-color: #fff;
+                    color: black;
                 }
             }
             .other-info {
                 .side-menu {
                     background-color: #fff;
+                    color: black;
                     .menu-subjects, .menu-interests {
                         fa-icon {
                             color: white;
@@ -31,6 +34,7 @@
                     .other-info-text {
                         .biography, .publications {
                             background-color: #fff;
+                            color: black;
                             fa-icon {
                                 color: #fff; 
                             }
@@ -77,7 +81,7 @@
         }
     }
     .content {
-        margin: 0px 10% 20px 10%;
+        margin: 0px 10% 0px 10%;
         padding: 50px;
         border-radius: 10px;
         .name {
