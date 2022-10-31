@@ -11,7 +11,6 @@ export class ControlPanelComponent implements OnInit {
 
   constructor(private themeService: ThemeService) {
     this.theme = themeService.getTheme();
-    console.log(this.theme);
   }
 
   theme : Theme = Theme.LIGHT_THEME;

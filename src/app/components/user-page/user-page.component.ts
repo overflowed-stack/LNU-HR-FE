@@ -12,7 +12,6 @@ export class UserPageComponent implements OnInit {
 
   constructor(private themeService: ThemeService) {
     this.theme = themeService.getTheme();
-    console.log(this.theme);
   }
 
   ngOnInit(): void {

@@ -18,7 +18,6 @@ export class HeaderMenuComponent implements OnInit {
   constructor(private _themeService: ThemeService) {
     this.theme = _themeService.getTheme();
     this.themeService = _themeService;
-    console.log(this.theme);
   }
   
 

@@ -20,7 +20,6 @@ export class HeaderUserInfoComponent implements OnInit {
   }
 
   toggleMenu() {
-    console.log(111)
     this.showMenu = !this.showMenu;
   }
 

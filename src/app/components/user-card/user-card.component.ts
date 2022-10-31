@@ -29,12 +29,12 @@ export class UserCardComponent implements OnInit {
   faTrashCan = faTrashCan;
 
   openDetails() {
-    console.log('details clicked');
+    
   }
   openEdit() {
-    console.log('openEdit clicked');
+    
   }
   delete() {
-    console.log('delete clicked');
+    
   }
 }

@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private themeService: ThemeService) {
     this.theme = themeService.getTheme();
-    console.log(this.theme);
     for (let i = 0; i < 20; ++i) {
       this.users.push({
         pib: 'Борисюк Ярина Євгенівна',

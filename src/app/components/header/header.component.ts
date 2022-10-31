@@ -13,7 +13,6 @@ export class HeaderComponent implements OnInit {
 
   constructor(private themeService: ThemeService) {
     this.theme = themeService.getTheme();
-    console.log(this.theme);
   }
 
   ngOnInit(): void {
@@ -26,7 +25,6 @@ export class HeaderComponent implements OnInit {
   isChangePasswordModalOpen = false;
 
   open(modalName: string) {
-    console.log(1)
     if (modalName === 'isLogInModalOpen') {
       this.isLogInModalOpen = true;
     } else if (modalName === 'isRegisterModalOpen') {
@@ -40,7 +38,6 @@ export class HeaderComponent implements OnInit {
   }
 
   close(modalName: string) {
-    console.log(2, modalName)
     if (modalName === 'isLogInModalOpen') {
       this.isLogInModalOpen = false;
     } else if (modalName === 'isRegisterModalOpen') {
