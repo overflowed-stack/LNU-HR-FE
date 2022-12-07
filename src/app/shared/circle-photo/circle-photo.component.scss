@@ -1,0 +1,13 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--foreground-color);
+    border-radius: 50%;
+
+    .photo {
+        width: calc(100% - 10px);
+        height: auto;
+        border-radius: inherit;
+    }
+}

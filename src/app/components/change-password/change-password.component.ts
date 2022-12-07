@@ -1,29 +1,19 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import Theme from 'src/app/constants/theme';
+import { DialogRef } from '@angular/cdk/dialog';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-change-password',
-  templateUrl: './change-password.component.html',
-  styleUrls: ['./change-password.component.scss']
+    selector: 'app-change-password',
+    templateUrl: './change-password.component.html',
+    styleUrls: ['./change-password.component.scss'],
 })
-export class ChangePasswordComponent implements OnInit {
+export class ChangePasswordComponent {
+    constructor(private readonly dialogRef: DialogRef) {}
 
-  @Input() theme : Theme = Theme.LIGHT_THEME;
-  @Output() closeEventEmitter = new EventEmitter<void>();
-  constructor() { }
+    public closeClick(): void {
+        this.dialogRef.close();
+    }
 
-  ngOnInit(): void {
-  }
-
-  close() {
-    this.closeEventEmitter.emit();
-  }
-
-  change() {
-    // this.close();
-  }
-
-  faXmark = faXmark;
-
+    public changeClick(): void {
+        this.dialogRef.close();
+    }
 }

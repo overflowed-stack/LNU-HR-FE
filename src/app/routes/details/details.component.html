@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <app-header
+        [name]="personName"
+        [degree]="person.degree"
+        [birthDate]="person.birthday"
+        [experience]="person.experience"
+        [gender]="person.gender"
+        [phone]="person.phone"
+        [mail]="person.email"
+        [photo]="person.photo"
+    ></app-header>
+
+    <div class="content">
+        <app-subjects-interests
+            [interests]="person.interests"
+            [subjects]="person.subjects"
+        ></app-subjects-interests>
+
+        <app-infobox
+            class="infobox"
+            iconId="bio"
+            title="Біографія"
+            [content]="person.bio"
+        ></app-infobox>
+
+        <app-infobox
+            class="infobox"
+            iconId="chalkboard"
+            title="Публікації"
+            [content]="publications"
+        ></app-infobox>
+    </div>
+</div>

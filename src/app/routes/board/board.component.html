@@ -1,0 +1,14 @@
+<app-sort-filter class="sort-filter"></app-sort-filter>
+
+<div class="cards-wrapper">
+    <app-user-card
+        *ngFor="let person of currentPage.personnel"
+        [person]="person"
+    ></app-user-card>
+</div>
+
+<app-pagination
+    [currentPageNumber]="currentPageNumber"
+    [pagesCount]="currentPage.pagesAmount"
+    (pageChange)="onPageChange($event)"
+></app-pagination>

@@ -1,0 +1,25 @@
+<app-icon class="icon top" iconId="books"></app-icon>
+
+<div class="section-wrapper">
+    <p class="section-title">Предмети</p>
+
+    <ul class="section-list">
+        <li *ngFor="let subject of subjects" class="list-item">
+            {{ subject.name }}
+        </li>
+    </ul>
+</div>
+
+<hr class="separator" />
+
+<div class="section-wrapper">
+    <p class="section-title">Наукові інтереси</p>
+
+    <ul class="section-list">
+        <li *ngFor="let interest of interests" class="list-item">
+            {{ interest }}
+        </li>
+    </ul>
+</div>
+
+<app-icon class="icon bottom" iconId="microscope"></app-icon>

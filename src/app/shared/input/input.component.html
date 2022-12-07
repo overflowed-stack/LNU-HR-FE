@@ -1,0 +1,10 @@
+<input
+    class="input"
+    [placeholder]="placeholder"
+    [formControl]="formControl"
+    type="text"
+/>
+
+<p *ngIf="innerLinkText" class="inner-link" (click)="onInnerLinkClick()">
+    {{ innerLinkText }}
+</p>

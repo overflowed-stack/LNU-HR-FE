@@ -1,0 +1,25 @@
+<p class="header">Панель керування</p>
+
+<div class="content">
+    <app-objects-list
+        class="personnel"
+        iconId="people"
+        title="Кадри"
+        [resetable]="true"
+        [items]="personnel"
+    ></app-objects-list>
+
+    <app-objects-list
+        class="degrees"
+        iconId="hierarchy"
+        title="Ступені"
+        [items]="degrees"
+    ></app-objects-list>
+
+    <app-objects-list
+        class="subjects"
+        iconId="books"
+        title="Предмети"
+        [items]="subjects"
+    ></app-objects-list>
+</div>

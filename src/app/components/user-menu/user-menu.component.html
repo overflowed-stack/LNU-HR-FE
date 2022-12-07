@@ -1,0 +1,41 @@
+<app-circle-photo
+    class="photo"
+    [imageSource]="userService.userPhoto"
+></app-circle-photo>
+
+<div class="dropdown-wrapper">
+    <div class="name-wrapper" (click)="dropdownToggle()">
+        <span class="name">{{ userService.userName }}</span>
+
+        <app-icon
+            class="dropdown-icon"
+            [iconId]="dropdownOpened ? 'up' : 'down'"
+        ></app-icon>
+    </div>
+
+    <div *ngIf="dropdownOpened" class="dropdown-list">
+        <div class="dropdown-item">
+            <app-icon class="dropdown-item-icon" iconId="profile"></app-icon>
+
+            <span>Профіль</span>
+        </div>
+
+        <div class="dropdown-item" (click)="passwordChangeClick()">
+            <app-icon class="dropdown-item-icon" iconId="reload"></app-icon>
+
+            <span>Змінити пароль</span>
+        </div>
+
+        <div class="dropdown-item" (click)="themeToggleClick()">
+            <app-icon class="dropdown-item-icon" iconId="daynight"></app-icon>
+
+            <span>Змінити тему</span>
+        </div>
+
+        <div class="dropdown-item" (click)="logOutClick()">
+            <app-icon class="dropdown-item-icon" iconId="exit"></app-icon>
+
+            <span>Вихід</span>
+        </div>
+    </div>
+</div>

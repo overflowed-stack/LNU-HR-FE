@@ -1,0 +1,13 @@
+@mixin hover() {
+    &:hover {
+        transition: box-shadow 0.3s ease-out;
+        box-shadow: inset 0 0 100vw #0000004d;
+    }
+}
+
+@mixin active() {
+    &:active {
+        transition: box-shadow 0.3s ease-out;
+        box-shadow: inset 0 0 100vw #00000066;
+    }
+}

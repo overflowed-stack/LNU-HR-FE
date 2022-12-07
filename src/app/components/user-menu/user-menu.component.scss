@@ -1,0 +1,85 @@
+@import "src/assets/mixins.scss";
+
+:host {
+    display: flex;
+    align-items: center;
+    user-select: none;
+
+    .photo {
+        width: 64px;
+        height: 64px;
+    }
+
+    .dropdown-wrapper {
+        position: relative;
+        min-width: 250px;
+        background-color: var(--foreground-color);
+        border-top-right-radius: 100vw;
+        border-bottom-right-radius: 100vw;
+        color: var(--secondary-text-color);
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -5%;
+            display: block;
+            height: 100%;
+            width: 5%;
+            background-color: inherit;
+            z-index: -1;
+        }
+
+        .name-wrapper {
+            display: flex;
+            align-items: center;
+            padding: 5px 10px 5px 5px;
+            cursor: pointer;
+
+            @include hover;
+            @include active;
+
+            .name {
+                flex-grow: 1;
+                margin-right: 5px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .dropdown-icon {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        .dropdown-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: calc(100% - 30px);
+            padding: 5px 0;
+            background-color: var(--foreground-color);
+            border-bottom-left-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+
+            .dropdown-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 5px;
+                font-size: 14px;
+                font-weight: bold;
+                cursor: pointer;
+
+                @include hover;
+                @include active;
+
+                .dropdown-item-icon {
+                    margin-right: 5px;
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+}

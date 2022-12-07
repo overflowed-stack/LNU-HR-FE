@@ -1,0 +1,70 @@
+@import "src/assets/mixins.scss";
+
+:host {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    width: 1450px;
+    height: 95px;
+    padding: 0 25px;
+    border-radius: var(--border-radius);
+    background-color: var(--foreground-color);
+    color: var(--secondary-text-color);
+    box-shadow: 0 4px 5px #00000040, 0 0 5px #00000040;
+
+    .icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .filters,
+    .sort {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .filters {
+        flex: 1 1 1020px;
+        display: flex;
+    }
+
+    .sort {
+        flex: 1 1 300px;
+        display: flex;
+        column-gap: 10px;
+        overflow: hidden;
+
+        .dropdown {
+            flex: 1;
+        }
+
+        .sort-direction-button {
+            height: 40px;
+            width: 40px;
+            padding: 5px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+
+            @include hover;
+            @include active;
+        }
+    }
+
+    .filter {
+        flex: 1 1 210px;
+        width: unset;
+        height: 100%;
+        font-size: 24px;
+        font-weight: normal;
+        background-color: unset;
+
+        &.dropdown {
+            position: static;
+            flex-grow: 0;
+            flex-basis: 300px;
+            height: 100%;
+        }
+    }
+}

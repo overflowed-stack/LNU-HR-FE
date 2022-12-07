@@ -1,0 +1,29 @@
+<app-button
+    class="button"
+    iconId="previous"
+    [disabled]="currentPageNumber === 1"
+    (buttonClick)="onPageChange(currentPageNumber - 1)"
+></app-button>
+
+<app-button
+    *ngIf="hasManyPreviousPages()"
+    class="button"
+    text="..."
+></app-button>
+
+<app-button
+    *ngFor="let page of pages"
+    class="button"
+    [color]="page === currentPageNumber ? 'yellow' : 'blue'"
+    [text]="page.toString()"
+    (buttonClick)="onPageChange(page)"
+></app-button>
+
+<app-button *ngIf="hasManyNextPages()" class="button" text="..."></app-button>
+
+<app-button
+    class="button"
+    iconId="next"
+    [disabled]="currentPageNumber === pagesCount"
+    (buttonClick)="onPageChange(currentPageNumber + 1)"
+></app-button>

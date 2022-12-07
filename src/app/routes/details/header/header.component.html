@@ -1,0 +1,28 @@
+<p class="name">{{ name }}</p>
+
+<p class="info">
+    {{ degree.name }} / {{ birthDate | date : "dd-MM-YYYY" }} /
+    {{ experience }}
+    {{ experience > 1 ? (experience < 5 ? "роки" : "років") : "рік" }} /
+    {{ getGenderString(gender) }}
+</p>
+
+<div class="wrapper">
+    <div class="photo-wrapper">
+        <img class="photo" [src]="photo" />
+    </div>
+
+    <div class="contacts">
+        <div class="contact">
+            <app-icon class="icon" iconId="phone"></app-icon>
+
+            <p class="content">{{ phone }}</p>
+        </div>
+
+        <div class="contact">
+            <app-icon class="icon" iconId="mail"></app-icon>
+
+            <p class="content">{{ mail }}</p>
+        </div>
+    </div>
+</div>

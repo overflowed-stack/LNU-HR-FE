@@ -1,0 +1,85 @@
+{
+    "pagesAmount": 33,
+    "personnel": [
+        {
+            "id": "032dd4ee-ee9d-4269-b564-e1c6391cf32c",
+            "photo": "https://picsum.photos/1000",
+            "lastName": "Effertz",
+            "firstName": "Світлана",
+            "surname": "Родіонівна",
+            "gender": 1,
+            "birthday": "1991-03-07T17:18:44.734Z",
+            "phone": "+380 (02) 466-21-03"
+        },
+        {
+            "id": "6f351ff7-6370-4fa2-a9af-5696b13b558c",
+            "photo": "https://picsum.photos/1000",
+            "lastName": "Kemmer",
+            "firstName": "Калина",
+            "surname": "Павлівна",
+            "gender": 1,
+            "birthday": "1981-05-03T10:06:07.109Z",
+            "phone": "+380 (08) 355-56-48"
+        },
+        {
+            "id": "d0c3b54a-7c51-437e-8c51-916d8f6723ed",
+            "photo": "https://picsum.photos/1000",
+            "lastName": "Trantow",
+            "firstName": "Степан",
+            "surname": "Андрійович",
+            "gender": 0,
+            "birthday": "1988-09-22T13:52:41.897Z",
+            "phone": "+380 (61) 204-48-42"
+        },
+        {
+            "id": "6b1814fe-9642-46ed-8220-0b6681612486",
+            "photo": "https://picsum.photos/1000",
+            "lastName": "Lemke",
+            "firstName": "Ганна",
+            "surname": "Данилівна",
+            "gender": 1,
+            "birthday": "1966-02-14T15:40:13.127Z",
+            "phone": "+380 (16) 794-43-89"
+        },
+        {
+            "id": "3adba266-22a5-4a69-a3cf-e797cf61fb3f",
+            "photo": "https://picsum.photos/1000",
+            "lastName": "Morar",
+            "firstName": "Анатолій",
+            "surname": "Альбертович",
+            "gender": 0,
+            "birthday": "1957-06-20T01:46:11.508Z",
+            "phone": "+380 (92) 165-97-20"
+        },
+        {
+            "id": "66fe772c-2a77-446e-add6-e5bc406b4247",
+            "photo": "https://picsum.photos/1000",
+            "lastName": "Rippin",
+            "firstName": "Аполлонія",
+            "surname": "Юхимівна",
+            "gender": 1,
+            "birthday": "1982-12-01T09:52:54.684Z",
+            "phone": "+380 (39) 839-37-03"
+        },
+        {
+            "id": "ccfe650f-4f81-480a-9b8c-f55a66ef7a53",
+            "photo": "https://picsum.photos/1000",
+            "lastName": "Parisian",
+            "firstName": "Сологуб",
+            "surname": "Михайлович",
+            "gender": 0,
+            "birthday": "1964-09-17T14:49:04.736Z",
+            "phone": "+380 (33) 829-14-29"
+        },
+        {
+            "id": "7d84b125-b3ce-467a-b81f-b405edfd9e96",
+            "photo": "https://picsum.photos/1000",
+            "lastName": "Kessler",
+            "firstName": "Віталіна",
+            "surname": "Андріївна",
+            "gender": 1,
+            "birthday": "1964-11-18T15:30:25.522Z",
+            "phone": "+380 (44) 283-39-78"
+        }
+    ]
+}

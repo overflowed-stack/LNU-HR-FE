@@ -1,0 +1,46 @@
+:host {
+    display: grid;
+    grid-template:
+        "header" 120px
+        "content" calc(100% - 120px)
+        / 1350px;
+    justify-content: center;
+    height: calc(100vh - 200px);
+    padding: 10px 0;
+    overflow: hidden;
+
+    .header {
+        grid-area: header;
+        background-color: var(--primary-color);
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+        padding: 30px;
+        margin: 0;
+        font-size: 48px;
+        font-weight: bold;
+        color: var(--primary-text-color);
+    }
+
+    .content {
+        grid-area: content;
+        display: grid;
+        grid-template-areas: "personnel degrees subjects";
+        column-gap: 10px;
+        padding: 20px;
+        background-color: var(--foreground-2-color);
+        border-bottom-left-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+
+        .personnel {
+            grid-area: personnel;
+        }
+
+        .degrees {
+            grid-area: degrees;
+        }
+
+        .subjects {
+            grid-area: subjects;
+        }
+    }
+}

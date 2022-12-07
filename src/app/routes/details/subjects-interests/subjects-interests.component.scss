@@ -1,0 +1,65 @@
+@import "src/assets/mixins.scss";
+
+:host {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+    height: 330px;
+    padding: 20px 20px 80px 20px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background-color: var(--foreground-color);
+    color: var(--secondary-text-color);
+
+    .icon {
+        position: absolute;
+        padding: 7px;
+        background-color: var(--primary-color);
+        color: var(--primary-text-color);
+        width: 45px;
+        height: 45px;
+
+        &.top {
+            top: 0;
+            left: 0;
+            border-bottom-right-radius: var(--border-radius);
+        }
+
+        &.bottom {
+            bottom: 0;
+            right: 0;
+            border-top-left-radius: var(--border-radius);
+        }
+    }
+
+    .section-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0;
+        }
+
+        .section-list {
+            padding-left: 10px;
+            margin: 10px 0 0 0;
+            list-style: square inside;
+            font-weight: bold;
+            overflow: auto;
+
+            .list-item::marker {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .separator {
+        border-color: var(--secondary-text-color);
+        margin: 10px 0;
+    }
+}
