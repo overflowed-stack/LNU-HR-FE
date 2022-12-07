@@ -1,0 +1,16 @@
+<div class="main" (click)="toggleState()">
+    <span class="placeholder">{{
+        selectedItem ? selectedItem.name : placeholder
+    }}</span>
+
+    <app-icon class="arrow" [iconId]="isOpened ? 'up' : 'down'"></app-icon>
+</div>
+
+<div *ngIf="isOpened" class="dropdown-list">
+    <app-dropdown-item
+        *ngFor="let item of items"
+        class="dropdown-item"
+        [displayText]="item.name"
+        (click)="selectItem(item)"
+    ></app-dropdown-item>
+</div>

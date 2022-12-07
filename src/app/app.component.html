@@ -1,8 +1,25 @@
-<div [ngClass]="{'overlay': modalOpened}">
-    <app-header
-        (modalChangeEventEmitter)="setModalState($event)"
-    >
-    </app-header>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
-</div>
+<header class="header">
+    <div class="wrapper">
+        <p class="title" routerLink="/">{{ appName }}</p>
+
+        <app-button
+            *ngIf="!userService.logged"
+            class="log-in-button"
+            text="Вхід"
+            [glowing]="true"
+            (buttonClick)="openSignInPopup()"
+        ></app-button>
+
+        <app-user-menu *ngIf="userService.logged"></app-user-menu>
+    </div>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer class="footer">
+    <div class="wrapper">
+        <p class="footer-title">{{ appName }}</p>
+
+        <p class="footer-subtext">&copy; Cringe Team</p>
+    </div>
+</footer>

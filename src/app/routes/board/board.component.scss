@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+
+    .sort-filter {
+        margin: 15px 0;
+    }
+
+    .cards-wrapper {
+        margin: 15px 0 10px;
+        max-width: 1450px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

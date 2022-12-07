@@ -1,0 +1,39 @@
+<header class="header">
+    <app-icon class="icon" [iconId]="iconId"></app-icon>
+
+    <p class="title">{{ title }}</p>
+</header>
+
+<table class="objects-table">
+    <thead>
+        <tr class="list-row header-row">
+            <th class="number-cell">#</th>
+
+            <th class="name-cell">Назва</th>
+        </tr>
+    </thead>
+
+    <tbody class="objects-list">
+        <tr *ngFor="let item of items; index as index" class="list-row">
+            <td class="number-cell">{{ index + 1 }}</td>
+
+            <td class="name-cell">
+                <span class="name">{{ item.name }}</span>
+            </td>
+
+            <td class="button-cell">
+                <app-button *ngIf="resetable" iconId="reload"></app-button>
+            </td>
+
+            <td class="button-cell">
+                <app-button iconId="edit" color="yellow"></app-button>
+            </td>
+
+            <td class="button-cell">
+                <app-button iconId="delete" color="red"></app-button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<app-button class="add-button" iconId="plus"></app-button>

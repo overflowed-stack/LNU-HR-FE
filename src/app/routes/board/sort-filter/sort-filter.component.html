@@ -1,0 +1,35 @@
+<app-icon class="icon" iconId="filter"></app-icon>
+
+<div class="filters">
+    <app-input class="filter" placeholder="ПІБ"></app-input>
+
+    <app-input class="filter" placeholder="Стаж"></app-input>
+
+    <app-dropdown-list
+        class="filter dropdown"
+        placeholder="Ступінь"
+        [items]="degrees"
+    ></app-dropdown-list>
+
+    <app-dropdown-list
+        class="filter dropdown"
+        placeholder="Предмет"
+        [items]="subjects"
+    ></app-dropdown-list>
+</div>
+
+<div class="sort">
+    <app-icon class="icon" iconId="sort"></app-icon>
+
+    <app-dropdown-list
+        class="filter dropdown"
+        placeholder="Сортувати за"
+        [items]="sortOptions"
+    ></app-dropdown-list>
+
+    <app-icon
+        class="sort-direction-button"
+        [iconId]="ascendingSort ? 'arrow-up' : 'arrow-down'"
+        (click)="toggleSortDirection()"
+    ></app-icon>
+</div>

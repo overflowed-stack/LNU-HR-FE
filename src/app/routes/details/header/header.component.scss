@@ -1,0 +1,70 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 0 50px;
+    width: 1450px;
+    height: 350px;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+
+    .name {
+        font-size: 48px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .info {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    .wrapper {
+        color: var(--secondary-text-color);
+        height: calc(100% - 122px);
+        display: flex;
+
+        .photo-wrapper {
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            background-color: var(--foreground-color);
+            border-radius: var(--border-radius);
+
+            .photo {
+                width: 100%;
+                height: 100%;
+                border-radius: var(--border-radius);
+            }
+        }
+
+        .contacts {
+            display: flex;
+            height: 115px;
+            padding: 20px;
+            column-gap: 20px;
+            border-top-right-radius: var(--border-radius);
+            background-color: var(--foreground-color);
+            align-self: flex-end;
+
+            .contact {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-width: 200px;
+
+                .icon {
+                    width: 38px;
+                    height: 38px;
+                    margin-bottom: 10px;
+                }
+
+                .content {
+                    margin: 0;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
