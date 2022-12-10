@@ -8,6 +8,7 @@
     background-color: var(--background-color);
     width: 100%;
     height: 100%;
+    user-select: none;
 
     .header {
         z-index: 1;
