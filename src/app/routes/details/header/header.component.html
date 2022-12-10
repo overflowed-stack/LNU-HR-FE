@@ -1,15 +1,17 @@
-<p class="name">{{ name }}</p>
-
-<p class="info">
-    {{ degree.name }} / {{ birthDate | date : "dd-MM-YYYY" }} /
-    {{ experience }}
-    {{ experience > 1 ? (experience < 5 ? "роки" : "років") : "рік" }} /
-    {{ getGenderString(gender) }}
-</p>
+<div class="photo-wrapper">
+    <img class="photo" [src]="photo" />
+</div>
 
 <div class="wrapper">
-    <div class="photo-wrapper">
-        <img class="photo" [src]="photo" />
+    <div>
+        <p class="name">{{ name }}</p>
+
+        <p class="info">
+            {{ degree.name }} / {{ birthDate | date : "dd-MM-YYYY" }} /
+            {{ experience }}
+            {{ experience > 1 ? (experience < 5 ? "роки" : "років") : "рік" }} /
+            {{ getGenderString(gender) }}
+        </p>
     </div>
 
     <div class="contacts">

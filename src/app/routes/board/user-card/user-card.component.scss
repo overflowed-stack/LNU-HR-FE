@@ -1,85 +1,77 @@
 :host {
-    position: relative;
-    width: 355px;
-    padding-top: 65px;
+    display: grid;
+    grid-template:
+        "photo   info   " auto
+        "buttons buttons" min-content
+        / 100px 1fr;
+    gap: 10px;
+    border-radius: var(--border-radius);
+    background-color: var(--foreground-color);
+    box-shadow: 0 4px 5px #00000040, 0 0 5px #00000040;
+    color: var(--secondary-text-color);
+    padding: 10px;
 
     .photo {
-        position: absolute;
-        top: 0;
-        left: calc(50% - 65px);
-        width: 130px;
-        height: 130px;
-
-        &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: block;
-            height: 100%;
-            width: 100%;
-            box-shadow: 0 4px 5px #00000040, 0 0 5px #00000040;
-            border-radius: 50%;
-            clip-path: polygon(
-                -5px 50%,
-                -5px -5px,
-                calc(100% + 5px) -5px,
-                calc(100% + 5px) 50%
-            );
-        }
+        grid-area: photo;
+        width: 100px;
+        height: 100px;
+        background-color: var(--foreground-2-color);
     }
 
     .content {
-        z-index: 1;
+        grid-area: info;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        color: var(--secondary-text-color);
-        padding: 80px 10px 10px 10px;
-        border-radius: var(--border-radius);
-        background-color: var(--foreground-color);
-        box-shadow: 0 4px 5px #00000040, 0 0 5px #00000040;
+        align-items: flex-start;
+        overflow: hidden;
+        padding-top: 10px;
 
         .name {
             margin: 0 0 10px 0;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
-        }
-
-        .info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-
-            .info-field {
-                display: flex;
-                align-items: center;
-
-                &:not(:last-of-type) {
-                    margin-bottom: 10px;
-                }
-
-                .icon {
-                    margin-right: 10px;
-                    width: 25px;
-                }
-
-                .data {
-                    font-size: 14px;
-                }
-            }
-        }
-
-        .buttons-wrapper {
             width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .info-field {
             display: flex;
             align-items: center;
-            gap: 10px;
 
-            .details-button {
-                flex-grow: 1;
+            &:not(:last-of-type) {
+                margin-bottom: 5px;
             }
+
+            .icon {
+                margin-right: 5px;
+                width: 15px;
+                height: 15px;
+            }
+
+            .data {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .buttons-wrapper {
+        grid-area: buttons;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 5px;
+        column-gap: 10px;
+
+        .details-button {
+            width: 100%;
+        }
+
+        .edit-button,
+        .delete-button {
+            flex-grow: 1;
         }
     }
 }

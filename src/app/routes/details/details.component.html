@@ -1,5 +1,6 @@
 <div class="wrapper">
     <app-header
+        class="header"
         [name]="personName"
         [degree]="person.degree"
         [birthDate]="person.birthday"
@@ -12,19 +13,20 @@
 
     <div class="content">
         <app-subjects-interests
+            class="subjects-interests"
             [interests]="person.interests"
             [subjects]="person.subjects"
         ></app-subjects-interests>
 
         <app-infobox
-            class="infobox"
+            class="bio"
             iconId="bio"
             title="Біографія"
             [content]="person.bio"
         ></app-infobox>
 
         <app-infobox
-            class="infobox"
+            class="publications"
             iconId="chalkboard"
             title="Публікації"
             [content]="publications"

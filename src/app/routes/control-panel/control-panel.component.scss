@@ -1,11 +1,11 @@
 :host {
+    grid-area: content;
     display: grid;
     grid-template:
         "header" 120px
         "content" calc(100% - 120px)
         / 1350px;
     justify-content: center;
-    height: calc(100vh - 200px);
     padding: 10px 0;
     overflow: hidden;
 

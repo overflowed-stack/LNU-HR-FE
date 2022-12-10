@@ -3,45 +3,43 @@
 <div class="content">
     <p class="name">{{ personName }}</p>
 
-    <div class="info">
-        <div class="info-field">
-            <app-icon class="icon" iconId="gender"></app-icon>
+    <div class="info-field">
+        <app-icon class="icon" iconId="gender"></app-icon>
 
-            <span class="data">{{ personGender }}</span>
-        </div>
-
-        <div class="info-field">
-            <app-icon class="icon" iconId="birthday-cake"></app-icon>
-
-            <span class="data">{{ personAge }}</span>
-        </div>
-
-        <div class="info-field">
-            <app-icon class="icon" iconId="phone"></app-icon>
-
-            <span class="data">{{ person.phone }}</span>
-        </div>
+        <span class="data">{{ personGender }}</span>
     </div>
 
-    <div class="buttons-wrapper">
-        <app-button
-            class="details-button button"
-            routerLink="/details"
-            text="Деталі"
-        ></app-button>
+    <div class="info-field">
+        <app-icon class="icon" iconId="birthday-cake"></app-icon>
 
-        <app-button
-            *ngIf="canEdit"
-            class="button"
-            iconId="edit"
-            color="yellow"
-        ></app-button>
-
-        <app-button
-            *ngIf="canDelete"
-            class="button"
-            iconId="delete"
-            color="red"
-        ></app-button>
+        <span class="data">{{ personAge }}</span>
     </div>
+
+    <div class="info-field">
+        <app-icon class="icon" iconId="phone"></app-icon>
+
+        <span class="data">{{ person.phone }}</span>
+    </div>
+</div>
+
+<div class="buttons-wrapper">
+    <app-button
+        class="details-button button"
+        routerLink="/details"
+        text="Деталі"
+    ></app-button>
+
+    <app-button
+        *ngIf="canEdit"
+        class="button edit-button"
+        iconId="edit"
+        color="yellow"
+    ></app-button>
+
+    <app-button
+        *ngIf="canDelete"
+        class="button delete-button"
+        iconId="delete"
+        color="red"
+    ></app-button>
 </div>

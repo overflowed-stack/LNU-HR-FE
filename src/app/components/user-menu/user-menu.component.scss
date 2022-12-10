@@ -61,6 +61,7 @@
             background-color: var(--foreground-color);
             border-bottom-left-radius: var(--border-radius);
             border-bottom-right-radius: var(--border-radius);
+            box-shadow: 0 4px 5px #00000040;
 
             .dropdown-item {
                 display: flex;
