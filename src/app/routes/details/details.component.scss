@@ -1,24 +1,45 @@
 :host {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
+    padding: 10px 0;
 
     .wrapper {
+        height: 100%;
+        display: grid;
+        grid-template:
+            "header " 200px
+            "content" calc(100% - 220px)
+            / auto;
         border-radius: var(--border-radius);
         background-color: var(--foreground-2-color);
         overflow: hidden;
+        gap: 20px;
+
+        .header {
+            grid-area: header;
+        }
 
         .content {
-            display: flex;
-            align-items: flex-end;
-            width: 100%;
-            column-gap: 20px;
-            padding: 20px 50px 35px 50px;
+            grid-area: content;
+            display: grid;
+            grid-template:
+                "subjects bio publications" 1fr
+                / 300px 1fr 1fr;
+            align-items: end;
+            gap: 20px;
+            padding: 0 20px 20px;
 
-            .infobox {
-                width: 505px;
-                height: 450px;
+            .subjects-interests {
+                grid-area: subjects;
+                height: calc(100% - 120px);
+            }
+
+            .bio {
+                grid-area: bio;
+                height: 100%;
+            }
+
+            .publications {
+                grid-area: publications;
+                height: 100%;
             }
         }
     }

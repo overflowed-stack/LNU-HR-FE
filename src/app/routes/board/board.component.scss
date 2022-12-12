@@ -1,19 +1,22 @@
 :host {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    grid-area: content;
+    display: grid;
+    grid-template:
+        "sort-filter" 95px
+        "cards      " 1fr
+        "pagination " auto
+        / auto;
+    row-gap: 20px;
+    justify-items: center;
     padding: 10px 0;
 
     .sort-filter {
-        margin: 15px 0;
+        width: 100%;
     }
 
     .cards-wrapper {
-        margin: 15px 0 10px;
-        max-width: 1450px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+        display: grid;
+        grid: auto-flow / repeat(4, 1fr);
+        gap: 20px;
     }
 }
